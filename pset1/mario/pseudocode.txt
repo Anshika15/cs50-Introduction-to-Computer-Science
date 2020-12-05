@@ -1,0 +1,4 @@
+Prompt the user for the Input
+If the user has added an invalid input go to line 1 again till the user adds a valid input
+Iterate i from 0 to height
+            iterate j in such a way that it prints # in the required format

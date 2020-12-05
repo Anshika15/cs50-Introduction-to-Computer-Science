@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Book Store</title>
+    </head>
+    <body class="welcome">
+
+    <br><br>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="container well">
+                     <form >
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="pwd">Password:</label>
+                          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        </div>
+
+                         <button type="submit" class="btn btn-success btn-lg btn-block" id="login">Login</button><br>
+                          <button type="button" class="btn btn-danger btn-lg btn-block" id="cancel"><a href="login.html">Cancel</a></button>
+                      </form>
+                       <div id="ale"></div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-2">
+            <div class="card" style="width: 10rem;"  data-aos="flip-left" data-aos-duration="1500">
+            <!--<img class="card-img-top" src="main1.jpeg" alt="product">-->
+            <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <p class="card-text">Login to the site!</p><br><br>
+            <a href="login.html" class="btn btn-primary" data-toggle="modal" data-target="#myModal">login</a>
+            </div>
+            </div>
+            </div>
+
+            <div class="col-md-2">
+            <div class="card" style="width: 10rem;"  data-aos="flip-left" data-aos-duration="1500">
+            <!--<img class="card-img-top" src="main1.jpeg" alt="product">-->
+            <div class="card-body">
+            <h5 class="card-title">Sigin</h5>
+            <p class="card-text">Register</p><br><br>
+            <a href="signin.html" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Sigin</a>
+            </div>
+            </div>
+            </div>
+
+            <div class="col-md-2">
+            <div class="card" style="width: 10rem;"  data-aos="flip-left" data-aos-duration="1500">
+            <!--<img class="card-img-top" src="main1.jpeg" alt="product">-->
+            <div class="card-body">
+            <h5 class="card-title">About us</h5>
+            <p class="card-text">Get to know</p><br><br>
+            <a href="aboutus.html" class="btn btn-primary" data-toggle="modal" data-target="#myModal">about us</a>
+            </div>
+            </div>
+            </div>
+        </div>
+         <script>
+        document.querySelector("#login").onclick =
+        function()
+        {
+            let a = document.querySelector("#email").value;
+            let b = document.querySelector("#pwd").value;
+             if (a == "" || b == "")
+            {
+	            document.querySelector("#ale").innerHTML = "oops...please the enter the details carefully" ;
+
+	            document.querySelector("#ale").classList.add("alert alert-danger") ;
+
+            }
+            else
+            {
+                parent.open("index.html");
+            }
+        }
+
+        </script>
+
+    </body>
+    </html>

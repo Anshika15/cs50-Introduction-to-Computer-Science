@@ -1,0 +1,23 @@
+.welcome {
+
+    background-image: url("/images/books.jpg");
+    background-repeat: no-repeat;
+ 	background-attachment: fixed;
+	background-size: 100%;
+}
+
+body{
+    text-align: center;
+    padding:20px;
+}
+
+.card{
+    background-color:lightblue;
+}
+
+#fhead{
+    color:yellow;
+}
+#shead{
+    color:yellow;
+}

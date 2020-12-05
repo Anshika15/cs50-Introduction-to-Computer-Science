@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock['stock'].upper() }}</td>
+                    <td>{{ stock['quantity'] }}</td>
+                    <td>{{ usd(stock['price']) }}</td>
+                    <td>{{ usd(stock['total']) }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td>{{ usd(cash) }}</td>
+            </tr>
+             <tr>
+                <td><b>TOTAL</b></td>
+                <td></td>
+                <td></td>
+                <td>{{ usd(total) }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}
